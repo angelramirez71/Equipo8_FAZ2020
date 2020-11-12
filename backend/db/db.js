@@ -14,6 +14,6 @@ if(err){
 
     console.log('base de datos conectada');
 }
-
+//ssssss
 })
 module.exports = mysqlConnection;
