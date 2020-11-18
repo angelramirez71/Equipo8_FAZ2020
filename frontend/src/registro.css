@@ -1,0 +1,39 @@
+.camporegistro{
+
+    text-align: center;
+    margin-top: 30px;
+    
+    }
+    .camporegistro2{
+    
+    text-align: center;
+    margin-top: 30px;
+    
+    }
+    .camporegistro3{
+    
+        text-align: center;
+        margin-top: 30px;
+        
+        }
+    
+    .imagenregistro{
+    text-align: center;
+    }
+    
+    .tituloregistro{
+        text-align: center;
+    margin-top: -11px;
+    }
+    
+    .botonregistro{
+        text-align: center;
+    margin-top: 40px;
+    color: white;
+    }
+    
+    .botonregistro2{
+    margin-top: 15px;
+    margin-left: 15px;
+    color: white;
+    }
