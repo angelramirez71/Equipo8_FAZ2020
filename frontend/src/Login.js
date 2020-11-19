@@ -30,13 +30,13 @@ function Login() {
 
       <div className="campologin">
       
-      <input type='text'></input>
+      <input type='mail' placeholder="email"></input>
 
       </div>
 
       <div className="campologin2">
 
-      <input type='mail'></input>
+      <input type='password' placeholder="contraseña"></input>
 
       </div>
 

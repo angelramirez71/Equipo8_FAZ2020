@@ -16,14 +16,20 @@ router.get('/cultivos',(req,res)=>{
 
 
 router.post('/nuevo_cultivo',(req,res)=>{
-const {nombres,apellidos,correo,documento,telefono_celular,fecha_nacimiento,institucion_id}=req.body;
+   const {nombres,apellidos,correo,documento,telefono_celular,fecha_nacimiento,institucion_id}=req.body;
 
-let alumno =[nombres,apellidos,correo,documento,telefono_celular,fecha_nacimiento,institucion_id];
+   let alumno =[nombres,apellidos,correo,documento,telefono_celular,fecha_nacimiento,institucion_id];
 
-let nuevoAlumno =`INSERT INTO actores(nombres,apellidos,correo,documento,telefono_celular,fecha_nacimiento,institucion_id)
-VALUES(?,?,?,?,?,?,?)`;
-mysqlConnection.query(nuevoAlumno,alumno,(err,results,fields)=>{
-if(err){
-   return console.error(err.mess
+   let nuevoAlumno =`INSERT INTO actores(nombres,apellidos,correo,documento,telefono_celular,fecha_nacimiento,institucion_id)
+   VALUES(?,?,?,?,?,?,?)`;
+   mysqlConnection.query(nuevoAlumno,alumno,(err,results,fields)=>{
+   if(err){
+      return console.error(err.message)
+   }   
 
-module.exports=router;
+   return results
+})
+})
+
+
+module.exports=router
