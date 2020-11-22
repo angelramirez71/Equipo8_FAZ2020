@@ -4,7 +4,7 @@ const mysqlConnection= require('../db/db');
 
 // traer todos los cultivos almacenados
 router.get('/cultivos',(req,res)=>{
-    mysqlConnection.query('SELECT * from tbl_cultivo ',(err,rows,fiels)=>{
+    mysqlConnection.query('SELECT * from tbl_cultivo',(err,rows,fiels)=>{
     if(!err){
        res.json(rows); 
     }else{
@@ -13,7 +13,6 @@ router.get('/cultivos',(req,res)=>{
     })// fin
 
 // los otros
-
 
 router.post('/nuevo_cultivo',(req,res)=>{
 const {nombres,apellidos,correo,documento,telefono_celular,fecha_nacimiento,institucion_id}=req.body;

@@ -9,10 +9,8 @@ const planta= require('./routes/sensor');
 //ajustes
 app.set('port',3000)
 
-
 // Middleware
 app.use(express.json());
-
 
 // ajustess
 app.use('/api/cultivo',cultivo);

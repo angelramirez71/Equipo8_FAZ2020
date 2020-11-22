@@ -24,7 +24,7 @@ return(
 
 <div className='imagenpl10'>
 
-<img src = 'apio.png' width='80px' height='80px'/>
+<Link to='/interactua'><img src = 'apio.png' width='80px' height='80px'/></Link>
 
 </div>
 

@@ -4,7 +4,7 @@ const mysqlConnection= require('../db/db');
 
 // traer todas las plantas almacenadas
 router.get('/plantas',(req,res)=>{
-    mysqlConnection.query('SELECT * from tbl_planta ',(err,rows,fiels)=>{
+    mysqlConnection.query('SELECT * from tbl_planta',(err,rows,fiels)=>{
     if(!err){
        res.json(rows); 
     }else{
@@ -13,7 +13,5 @@ router.get('/plantas',(req,res)=>{
     })// fin
 
 // los otros
-
-
 
 module.exports=router;

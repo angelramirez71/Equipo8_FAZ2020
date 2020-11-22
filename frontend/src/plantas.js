@@ -24,7 +24,7 @@ return(
 
 <div className='imagenplantas'>
 
-<img src = 'zanahoria.png' width='80px' height='80px'/>
+<Link to='/interactua'><img src = 'zanahoria.png' width='80px' height='80px'/></Link>
 
 </div>
 

@@ -24,7 +24,7 @@ return(
 
 <div className='imagenpl5'>
 
-<img src = 'lechuga.png' width='80px' height='80px'/>
+<Link to='/interactua'><img src = 'lechuga.png' width='80px' height='80px'/></Link>
 
 </div>
 

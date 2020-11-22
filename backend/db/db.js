@@ -11,7 +11,6 @@ if(err){
     console.error(err);
     return;
 }else{
-
     console.log('base de datos conectada');
 }
 //ssssss

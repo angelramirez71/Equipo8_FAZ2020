@@ -12,8 +12,16 @@ router.get('/plantas',(req,res)=>{
     }});
     })// fin
 
+// Enviar los datos del usuario al registrarse e iniciar sesión
+    router.post('/datos',(req,res)=>{
+    mysqlConnection.query(,(err,rows,fiels)=>{
+    if(!err){
+       res.json(rows); 
+    }else{
+    console.log(err);
+    }});
+    })// fin
+
 // los otros
-
-
 
 module.exports=router;
