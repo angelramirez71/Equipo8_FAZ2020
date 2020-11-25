@@ -6,6 +6,7 @@ password:'omlwlor0vFB6KaOP6kqW',
 database:'b6zhyg2epdpbpyk87ora',
 multipleStatements:true
 });
+
 mysqlConnection.connect(function(err){
 if(err){
     console.error(err);
