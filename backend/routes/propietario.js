@@ -3,8 +3,8 @@ const router = express.Router();
 const mysqlConnection= require('../db/db');
 
 // traer todas las plantas almacenadas
-router.get('/plantas',(req,res)=>{
-    mysqlConnection.query('SELECT * from tbl_planta ',(err,rows,fiels)=>{
+router.get('/propietario',(req,res)=>{
+    mysqlConnection.query('SELECT * from tbl_propietario',(err,rows,fiels)=>{
     if(!err){
        res.json(rows); 
     }else{
@@ -13,7 +13,7 @@ router.get('/plantas',(req,res)=>{
     })// fin
 
 // Enviar los datos del usuario al registrarse e iniciar sesión
-    router.post('/datos',(req,res)=>{
+    router.post('/propietario',(req,res)=>{
     mysqlConnection.query(,(err,rows,fiels)=>{
     if(!err){
        res.json(rows); 

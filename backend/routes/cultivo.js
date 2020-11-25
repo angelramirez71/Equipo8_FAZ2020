@@ -3,7 +3,7 @@ const router = express.Router();
 const mysqlConnection= require('../db/db');
 
 // traer todos los cultivos almacenados
-router.get('/cultivos',(req,res)=>{
+router.get('/cultivo',(req,res)=>{
     mysqlConnection.query('SELECT * from tbl_cultivo',(err,rows,fiels)=>{
     if(!err){
        res.json(rows); 
@@ -15,13 +15,13 @@ router.get('/cultivos',(req,res)=>{
 // los otros
 
 router.post('/nuevo_cultivo',(req,res)=>{
-const {nombres,apellidos,correo,documento,telefono_celular,fecha_nacimiento,institucion_id}=req.body;
+const {cod_cultivo,propietario,planta,humedad,hor_riegos}=req.body;
 
-let alumno =[nombres,apellidos,correo,documento,telefono_celular,fecha_nacimiento,institucion_id];
+let tbl_cultivo =[cod_cultivo,propietario,planta,humedad,hor_riegos];
 
-let nuevoAlumno =`INSERT INTO actores(nombres,apellidos,correo,documento,telefono_celular,fecha_nacimiento,institucion_id)
-VALUES(?,?,?,?,?,?,?)`;
-mysqlConnection.query(nuevoAlumno,alumno,(err,results,fields)=>{
+let nuevo_cultivo =`INSERT INTO actores(cod_cultivo,propietario,planta,humedad,hor_riegos)
+VALUES(?,?,?,?,?)`;
+mysqlConnection.query(nuevo_cultivo(err,results,fields)=>{
 if(err){
    return console.error(err.mess
 

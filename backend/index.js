@@ -3,8 +3,8 @@ const express= require('express');
 const app = express();
 const cultivo= require('./routes/cultivo');
 const planta= require('./routes/planta');
-const planta= require('./routes/propietarios');
-const planta= require('./routes/sensor');
+const propietario= require('./routes/propietario');
+const sensor= require('./routes/sensor');
 
 //ajustes
 app.set('port',3000)
@@ -15,7 +15,7 @@ app.use(express.json());
 // ajustess
 app.use('/api/cultivo',cultivo);
 app.use('/api/planta',planta);
-app.use('/api/propietarios',propietarios);
+app.use('/api/propietario',propietario);
 app.use('/api/sensor',sensor);
 
 app.listen(app.get('port'),()=>{
